@@ -1,4 +1,4 @@
-# AI Crawler Quicksand Technology
+# SrapeGuard - AI Crawler Quicksand Technology
 
 A simple but effective technique to create a "quicksand" effect for AI crawlers and bots, while ensuring real users are directed to the correct content.
 
