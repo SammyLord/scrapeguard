@@ -60,7 +60,9 @@
     <script>
         // Simple check for old browsers - if this fails, it's an old browser
         var isOldBrowser = false;
-        if (!document || !document.createElement || !document.body || !document.innerText) {
+        if (typeof document == 'undefined' || 
+            typeof document.body == 'undefined' || 
+            typeof document.body.innerHTML == 'undefined') {
             isOldBrowser = true;
         }
     </script>
