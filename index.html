@@ -57,6 +57,13 @@
     </style>
 </head>
 <body>
+    <script>
+        // Simple check for old browsers - if this fails, it's an old browser
+        var isOldBrowser = false;
+        if (!document || !document.createElement || !document.body || !document.innerText) {
+            isOldBrowser = true;
+        }
+    </script>
     <h1 id="heading" class="loading"></h1>
     <div id="content" class="loading"></div>
     <a href="bc2.html" class="next-link">Next</a>
@@ -125,29 +132,6 @@
 
         const userAgent = navigator.userAgent.replace("User-agent: ", "").replace("User agent: ", "");
         const isBot = botUserAgents.some(bot => userAgent.includes(bot));
-
-        // Check for older browsers - IE5 compatible version
-        var isOldBrowser = false;
-        
-        // Basic feature detection for IE5
-        if (!document.getElementById || 
-            !document.getElementsByTagName || 
-            !document.createElement || 
-            !document.body || 
-            !document.documentElement) {
-            isOldBrowser = true;
-        }
-        
-        // Check for basic DOM methods
-        var testDiv = document.createElement('div');
-        if (!testDiv || !testDiv.innerHTML) {
-            isOldBrowser = true;
-        }
-        
-        // Check for basic event handling
-        if (!window.onload && !window.attachEvent) {
-            isOldBrowser = true;
-        }
 
         if (isOldBrowser) {
             // For older browsers, redirect to the main page
