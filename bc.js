@@ -13,6 +13,8 @@ function getCurrentDocumentName() {
     // Extract the filename from the pathname
     const filename = pathname.split('/').pop();
 
+    console.log(`current filename: ${filename}`);
+
     return filename;
 }
 
@@ -114,7 +116,7 @@ function addNextLink() {
     } else if (getCurrentDocumentName() === 'bc7.html') {
         nextLinkURL = 'index.html';
     }
-    document.body.getElementById('content').innerHTML = `${document.body.getElementById('content').innerHTML} 
+    document.getElementById('content').innerHTML = `${document.getElementById('content').innerHTML} 
     <a href="${nextLinkURL}" class="next-link">Next</a>` 
 }
 function generateContent() {
