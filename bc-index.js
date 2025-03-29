@@ -253,6 +253,8 @@ function generateContent() {
                     contentDiv.appendChild(br);
                     window.setTimeout(addWords, 3000);
                 }
+            }
+        }
     }
     
     addWords();

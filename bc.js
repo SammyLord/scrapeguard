@@ -149,6 +149,8 @@ function generateContent() {
                     contentDiv.appendChild(document.createElement('br'));
                     setTimeout(addWords, 3000);
                 }
+            }
+        }
     }
     
     addWords();
