@@ -149,16 +149,11 @@ function generateContent() {
                 if (currentParagraphIndex < paragraphs.length) {
                     contentDiv.appendChild(document.createElement('br'));
                     setTimeout(addWords, 3000);
-                } else {
-                    addNextLink();
                 }
-            }
-        } else {
-            addNextLink();
-        }
     }
     
     addWords();
+    addNextLink();
 }
 
 // Cross-browser event listener

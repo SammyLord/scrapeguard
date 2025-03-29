@@ -252,16 +252,11 @@ function generateContent() {
                     var br = document.createElement('br');
                     contentDiv.appendChild(br);
                     window.setTimeout(addWords, 3000);
-                } else {
-                    addNextLink()
                 }
-            }
-        } else {
-            addNextLink()
-        }
     }
     
     addWords();
+    addNextLink();
 }
 
 // Cross-browser event listener
