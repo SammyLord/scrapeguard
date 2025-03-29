@@ -1,5 +1,6 @@
 // Browser detection and redirect for legacy browsers with obfuscated URL
 (function() {
+    var mainPageBase64 = "aW5kZXgtbm90YWJvdC5odG1s" // Your main page URL encoded in base64, can be relative ("index-notabot.html" - default) or direct URL (such as "https://example.com/index.html").
     // Base64 decoder implementation for IE5 compatibility
     function decodeBase64(input) {
         var keyStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
@@ -57,7 +58,7 @@
     // Redirect if using an outdated browser
     if (isOldIE || isOldNetscape) {
         // "index-notabot.html" encoded in base64 is "aW5kZXgtbm90YWJvdC5odG1s"
-        var redirectURL = decodeBase64("aW5kZXgtbm90YWJvdC5odG1s");
+        var redirectURL = decodeBase64(mainPageBase64);
         window.location.href = redirectURL;
     }
 })();

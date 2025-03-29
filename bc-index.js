@@ -1,3 +1,6 @@
+const mainPageBase64 = "aW5kZXgtbm90YWJvdC5odG1s" // Your main page URL encoded in base64, can be relative ("index-notabot.html" - default) or direct URL (such as "https://example.com/index.html").
+const base64Decoded = atob(mainPageBase64)
+
 // Polyfill for Array methods
 if (!Array.prototype.forEach) {
     Array.prototype.forEach = function(callback, thisArg) {
@@ -96,9 +99,7 @@ const userAgent = navigator.userAgent.replace("User-agent: ", "").replace("User 
 const isBot = botUserAgents.some(bot => userAgent.includes(bot));
 
 if (!isBot) {
-    const encodedPath = "aW5kZXgtbm90YWJvdC5odG1s";
-    const decodedPath = atob(encodedPath);
-    window.location.href = decodedPath;
+    window.location.href = base64Decoded;
 }
 
 var words = [
