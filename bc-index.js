@@ -217,8 +217,8 @@ if (!String.prototype.split) {
 }
 
 function addNextLink() {
-    document.getElementById('content').innerHTML = `${document.getElementById('content').innerHTML}
-    <a href="bc2.html" class="next-link">Next</a>`
+    document.body.innerHTML = `${document.body.innerHTML}
+    <p><a href="bc2.html" class="next-link">Next</a></p>`
 }
 
 function generateContent() {

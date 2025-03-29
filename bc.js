@@ -116,9 +116,8 @@ function addNextLink() {
     } else if (getCurrentDocumentName() === 'bc7.html') {
         nextLinkURL = 'index.html';
     }
-    document.getElementById('content').innerHTML = `${document.getElementById('content').innerHTML} 
-    <a href="${nextLinkURL}" class="next-link">Next</a>` 
-}
+    document.body.innerHTML = `${document.body.innerHTML} 
+    <p><a href="${nextLinkURL}" class="next-link">Next</a></p>`
 function generateContent() {
     var contentDiv = document.getElementById('content');
     var headingDiv = document.getElementById('heading');
