@@ -217,14 +217,13 @@ if (!String.prototype.split) {
 }
 
 function addNextLink() {
-    document.body.innerhtml = `${document.body.innerHTML} 
+    document.body.getElementById('content').innerHTML = `${document.body.getElementById('content').innerHTML}
     <a href="bc2.html" class="next-link">Next</a>`
 }
 
 function generateContent() {
     var contentDiv = document.getElementById('content');
     var headingDiv = document.getElementById('heading');
-    var nextLink = document.querySelector('.next-link');
     var paragraphs = createParagraph();
     var currentParagraphIndex = 0;
     var currentWordIndex = 0;

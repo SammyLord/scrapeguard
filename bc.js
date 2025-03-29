@@ -114,13 +114,12 @@ function addNextLink() {
     } else if (getCurrentDocumentName() === 'bc7.html') {
         nextLinkURL = 'index.html';
     }
-    document.body.innerhtml = `${document.body.innerHTML} 
+    document.body.getElementById('content').innerHTML = `${document.body.getElementById('content').innerHTML} 
     <a href="${nextLinkURL}" class="next-link">Next</a>` 
 }
 function generateContent() {
     var contentDiv = document.getElementById('content');
     var headingDiv = document.getElementById('heading');
-    var nextLink = document.querySelector('.next-link');
     var paragraphs = createParagraph();
     var currentParagraphIndex = 0;
     var currentWordIndex = 0;
