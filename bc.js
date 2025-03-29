@@ -118,6 +118,8 @@ function addNextLink() {
     }
     document.body.innerHTML = `${document.body.innerHTML} 
     <p><a href="${nextLinkURL}" class="next-link">Next</a></p>`
+}
+
 function generateContent() {
     var contentDiv = document.getElementById('content');
     var headingDiv = document.getElementById('heading');
