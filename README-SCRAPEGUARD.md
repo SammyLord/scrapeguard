@@ -18,11 +18,11 @@ This technology works by creating a series of pages that appear to contain rando
 
 1. Rename your main content page from `index.html` to `index-notabot.html`
 
-2. Create a series of "quicksand" pages (bc1.html through bc7.html, for bot crawlers which use JS) with the following characteristics:
+2. Create a series of "quicksand" pages (index.html/bc1 through bc7.html, for bot crawlers which use JS) with the following characteristics:
    - Each page generates random content from a predefined word list
    - Content loads gradually with smooth animations
    - Pages link to each other in sequence
-   - The last page (bc7.html) links back to bc1.html
+   - The last page (bc7.html) links back to index.html (the bc1 page)
    - The "index.html" file includes a user agent check that redirects non-bots to index-notabot.html
 
 3. The user agent check looks for common AI crawler identifiers:
