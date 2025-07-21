@@ -25,7 +25,7 @@ This technology works by creating a series of pages that appear to contain rando
    - The last page (bc7.html) links back to index.html (the bc1 page)
    - The "index.html" file includes a user agent check that redirects non-bots to index-notabot.html
 
-3. The user agent check looks for common AI crawler identifiers:
+3. The user agent check looks for common AI crawler identifiers (Credit to [ai-robots.txt!](https://github.com/ai-robots-txt/ai.robots.txt/blob/main/robots.txt)):
    - anthropic-ai
    - Claude-Web
    - Applebot-Extended
