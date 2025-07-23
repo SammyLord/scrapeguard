@@ -1,1 +1,2 @@
-index-notabot.html
+User-agent: *
+Disallow: index-notabot.html
